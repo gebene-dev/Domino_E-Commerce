@@ -1,0 +1,163 @@
+/*----MAIN----*/
+.carga-producto main{
+    width: 100%;
+    padding: 20px 5px;
+    background-color: var(--blanco);
+}
+
+.carga-producto main .formulario{
+    border: 3px solid rgb(167, 165, 165);
+    border-radius: 8px;
+}
+
+.carga-producto main h3{
+    padding: 20px 20px 0 20px;
+    text-transform: uppercase;
+    margin-bottom: 0px
+}
+/*---FORMULARIO---*/
+.carga-producto main form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.carga-producto main form .primero .segundo{
+    display: flex;
+    flex-direction: column;
+}
+.carga-producto .primero .form .img{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: center;
+    border: solid 1px black;
+}
+
+.carga-producto .primero .form .img p{
+    text-align: center;
+}
+.carga-producto .primero .form .galeria{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.carga-producto .primero .form .galeria button{
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 4px;
+    border-top: none;
+    padding: 4px;
+}
+.carga-producto .primero .form .galeria input{
+    position: absolute;
+    opacity: 0;
+    padding: 4px;
+    height: 100%;
+    width: 100%;
+}
+.carga-producto main .segundo .form .checkbox{
+    display: flex;
+    flex-direction: column;
+    height: 215px;
+    flex-wrap: wrap;
+}
+.carga-producto main .segundo .form .checkbox .size{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.carga-producto main .primero .form, .carga-producto main .segundo .form, .carga-producto main .tercero .form{
+    display: flex;
+    flex-direction: column;
+}
+
+.carga-producto main .form{
+    margin-bottom: 15px;
+}
+
+.carga-producto main .form input{
+    padding: 4px;
+    color: black;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+.carga-producto main .form select{
+    padding: 4px;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+.carga-producto main .tercero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.carga-producto main .tercero .botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.carga-producto main .tercero .botones button{
+    width: 60%;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: black;
+    color: var(--blanco);
+    border: none;
+    border-radius: 4px;
+}
+.carga-producto .tercero .botones button:hover{
+    background-color: rgb(202, 198, 198);
+    color: black;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+.previewProduct{
+    
+    padding: 10px;
+}
+.previewProduct img {
+    width: 100%;
+}
+@media (min-width: 768px){
+    /*----MAIN----*/
+    .carga-producto main{
+        padding: 50px;
+    }
+    .carga-producto main form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .carga-producto main form .primero, .carga-producto main form .segundo{
+        width: 45%;
+    }
+    .carga-producto main form .tercero{
+        width: 100%;
+        flex-direction: row;
+    }
+    .carga-producto main form .tercero .form, .carga-producto main form .tercero .botones{
+        width: 45%;
+    }
+    
+}
+@media (min-width: 1024px){
+    /*----MAIN----*/
+    .carga-producto main form{
+        padding: 20px 80px;
+        font-size: 20px;
+    }
+    .carga-producto main form .primero, .carga-producto main form .segundo, .carga-producto main form .tercero{
+        width: 30%;
+    }
+    .carga-producto .primero .form .img{
+        height: 180px;
+    }
+    .carga-producto main form .tercero{
+        flex-direction: column;
+    }
+    .carga-producto main form .tercero .form, .carga-producto main form .tercero .botones{
+        width: 100%;
+    }
+}

@@ -1,0 +1,485 @@
+/*-----------MAIN----------*/
+.carrito{
+    background-color: var(--blanco);
+}
+main{
+    width: 100%;
+}
+
+
+/* Saludo */
+.carrito .bienvenida{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.carrito .bienvenida .saludo{
+    text-align: center;
+    line-height: 30px;
+}
+.carrito .bienvenida .saludo p{
+    font-size: 18px;
+}
+.carrito .bienvenida .saludo h3{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/* Productos */
+.carrito .primero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 1px rgb(167, 165, 165);
+    border-bottom: solid 1px rgb(167, 165, 165);
+}
+.carrito .primero .productos{
+    width: 90%;
+    display: flex;
+    margin: 15px 5px;
+    flex-direction: column;
+}
+/* Articulos */
+.carrito .primero .productos article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+    justify-content: space-between;
+
+}
+.carrito .primero .productos article img{
+    width: 50%;
+    border: solid 1px black
+}
+.carrito .primero .productos article .caja-normal{
+    display: none;
+}
+
+.carrito .primero .productos article .caja-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 10px;
+    line-height: 30px;
+}
+.carrito .primero .productos article .caja-mobile p2, .carrito .primero .productos article .caja-mobile .eliminar{
+    color: coral;
+}
+.carrito .primero .productos article .caja-mobile .eliminar{
+    display: flex;
+    align-self: flex-end;
+}
+
+/* Metodos de pago */
+.carrito .primero section .aside{
+    display: none;
+}
+
+.carrito .primero section{
+    width: 100%;
+    border-top: solid 1px rgb(167, 165, 165);
+}
+.carrito .primero section .aside-mobile{
+    display: flex;
+    flex-direction: column;
+}
+.carrito .primero section .aside-mobile .total{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 10px;
+    justify-content: space-between;
+}
+
+.carrito .primero section .aside-mobile .button-pagar{
+    text-align: center;
+    border-top: solid 1px rgb(167, 165, 165);
+    border-bottom: solid 1px rgb(167, 165, 165);
+}
+.carrito .primero section .aside-mobile .button-pagar button{
+    background-color: white;
+    font-size: 15px;
+    margin: 15px 0px;
+    padding: 5px 80px;
+}
+.carrito .primero section .aside-mobile .codigo-promocional{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrito .primero section .aside-mobile form{
+    width: 100%;
+    margin: 0 5px;
+
+
+}
+.carrito .primero section .aside-mobile .codigo-promocional form .promo{
+    width: 70%;
+    padding: 5px;
+    border-radius: 8px 0 0 8px;
+}
+.carrito .primero section .aside-mobile .codigo-promocional form button{
+    width: 30%;
+    background-color: white;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 10px;
+}
+/* Sugerencias */
+
+.carrito .sugerencias{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+}
+.carrito .sugerencias .titulo{
+    padding: 10px;
+}
+.carrito .sugerencias section{
+    width: 100%;
+}
+
+.carrito .sugerencias section article{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: solid 1px black;
+    width: 80%;
+    height: 100%;
+
+    
+}
+.carrito .sugerencias section article img{
+    border-right: solid 1px black;
+    width: 40%;
+    height: 100%;
+   
+  
+}
+.carrito .sugerencias section article .box{
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    margin: 0 10px;
+    width: 90%;
+
+    justify-content: space-around;
+}
+.carrito .sugerencias section article .box .precio{
+    display: flex;
+    align-self: flex-end;
+}
+
+/* Locales */
+.carrito .locales{
+    width: 100%;  
+    border-top: solid 1px rgb(167, 165, 165);
+    border-bottom: solid 1px rgb(167, 165, 165);
+
+    
+}
+
+.carrito .locales .tiendas{
+    margin: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+   
+}
+.carrito .locales .tiendas p{
+    text-align: center;
+}
+.carrito .locales .tiendas button{
+    padding: 5px;
+    margin: 10px;
+}
+.carrito .newsletter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+.carrito .newsletter .text h3{
+    text-align: center;
+}
+.carrito .newsletter .text p{
+    text-align: center;
+}
+.carrito .newsletter form{
+    margin: 10px 5px;
+    width: 90%;
+    
+}
+.carrito .newsletter form .news{
+    width: 70%;
+    padding: 5px;
+    border-radius: 8px 0 0 8px;
+}
+.carrito .newsletter form button{
+    width: 30%;
+    padding: 5px;
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+    background-color: white;
+}
+
+
+
+
+
+@media (min-width: 768px){
+    /*---------Main--------------*/
+    .carrito .bienvenida .saludo p{
+        font-size: 20px;
+    }
+    .carrito .bienvenida .saludo h3{
+        font-size: 30px;
+    }
+    .carrito .primero{
+        border-top: none;
+        border-bottom: none;
+    }
+    .carrito .primero .productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    }
+    .carrito .primero .productos article .caja-mobile{
+    display: none;
+    }
+    .carrito .primero .productos article{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    border: solid 1px black;
+    }
+    .carrito .primero .productos article img{
+    border: none;
+    width: 50%;
+    align-items: center;
+    border-right: solid 1px black;  
+    }
+    .carrito .primero .productos article .caja-normal{
+    display: inline;
+    margin: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    }
+    .carrito .primero .productos article .caja-normal .descripcion{
+    line-height: 30px;
+    }
+    .carrito .primero .productos article .caja-normal .box-2{
+    display: flex;
+    flex-direction: column;
+    }
+    .carrito .primero .productos article .caja-normal .box-2 .form-cantidad form .cantidad{
+    padding: 10px;
+    
+    }
+    .carrito .primero .productos article .caja-normal .box-2 .button-eliminar{
+    display: flex;
+    align-self: flex-end;
+    color: coral;
+    font-size: 15px;
+    }
+    /* Aside */
+    .carrito .primero section{
+        border-top: none;
+    }
+    .carrito .primero section .aside-mobile{
+    display: none;
+    }
+    .carrito .primero section .aside{
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    }
+
+    .carrito .primero section .aside .button-normal{
+    display: flex;
+    flex-direction: column;
+
+    }
+    .carrito .primero section .aside .button-normal button{
+    background-color: white;
+    padding: 15px 200px;
+    border-radius: 30px ;
+    font-size: 20px;
+    
+    }
+    .carrito .primero section .aside .aside-pago{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border: solid 1px black;
+    
+    }
+    .carrito .primero section .aside .aside-pago p{
+    margin: 10px ;
+    }
+
+    .carrito .primero section .aside .aside-pago .box-pago{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 0px;
+    border-top: solid 1px black;
+
+    }
+    .carrito .primero section .aside .box-pago form input{
+    width: 350px;
+    padding: 5px;
+    border: none;
+    }
+    .carrito .primero section .aside .box-pago button{
+    width: 150px;
+    padding: 5px;
+    border: none;
+    background-color: white;
+    border-left: solid 1px black;
+    }
+    .carrito .primero section .aside .box-pago .tarjetas{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+    /* Sugerencias */
+    .carrito .sugerencias{
+        align-items: center;
+    }
+    .carrito .sugerencias .titulo{
+        font-size: 20px;
+        align-self: flex-start;
+    }
+        
+    
+    .carrito .sugerencias section{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    .carrito .sugerencias section article{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+    }
+    .carrito .sugerencias section article img{
+        width: 100%;
+        height: 70%;
+        border:none
+    };
+    .carrito .sugerencias section article .box{
+        width: 100%;
+        height: 30%;
+
+    }
+    /* Locales */
+    .carrito .locales .tiendas{
+        margin: 100px 20px;
+    }
+    .carrito .newsletter form{
+        width: 60%;
+
+    }
+    .carrito .newsletter form .news{
+        padding: 10px;
+    }
+    
+    .carrito .newsletter form button{
+        padding: 10px;
+    }
+  
+    
+
+
+}
+@media (min-width: 1024px){
+    .carrito .bienvenida{
+        display: flex;
+        flex-direction: row;
+    }
+    .carrito .bienvenida .saludo{
+        text-align: start;
+        margin: 25px;
+    }
+
+    .carrito .primero{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: initial;
+    }
+    .carrito .primero .productos{
+        width: 50%;
+        margin: 0;
+    }
+    .carrito .primero .productos article{
+        width: 80%;
+        margin: 10px 0;
+        border: none;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+
+    }
+    .carrito .primero .productos article img{
+        border-right: none;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 )
+
+    }
+    .carrito .primero section{
+        width: 50%
+
+    }
+    .carrito .carrito section aside{
+        width: 80%;
+        margin: 0px;
+    }
+    .carrito .primero section .aside .button-normal{
+        width: 80%;
+    }
+    .carrito .primero section .aside .button-normal button {
+        background-color: white;
+        padding: 15px 150px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+    .carrito .primero section .aside .aside-pago{
+        width: 80%;
+    }
+    .carrito .sugerencias section article{
+        width: 20%;
+        border: none;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+
+    }
+    .carrito .newsletter form {
+        width: 40%;
+    }
+ 
+  
+
+}

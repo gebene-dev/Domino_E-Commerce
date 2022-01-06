@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<%-include('./partials/head')%>
+
+    <body class="contacto">
+
+        <%-include('./partials/header')%>
+
+            <main>
+
+                <div class="container">
+
+                    <div class="formulario">
+
+                        <h3>Formulario de contacto</h3>
+                        <p id="error-empty" class="text-danger"></p>
+                        <form class="needs-validation" action="/products/createProduct" method="POST"
+                            id="form-contacto">
+
+                            <div class="primero">
+
+                                <div>
+                                    <label>Consulta</label>
+                                    <select class="form-select form-control" name="motivo" id="motivo" required>
+                                        <option value="" selected hidden>Elegir motivo</option>
+                                        <option value="1">Consulta sobre producto</option>
+                                        <option value="2">Consulta sobre compra online</option>
+                                        <option value="3">Consulta sobre compra en locales</option>
+                                        <option value="4">Reclamo sobre falla de fabricación de un producto</option>
+                                        <option value="5">Reclamo sobre una compra online</option>
+                                        <option value="6">Reclamo sobre una compra en local</option>
+                                        <option value="7">otro</option>
+                                    </select>
+                                    <p class="invalid-feedback" id="error-motivo"></p>
+                                </div>
+
+                                <div>
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text"
+                                        class="form-control <%= locals.errors && locals.errors.nombre ? 'is-invalid' : null %> "
+                                        id="nombre" name="nombre"
+                                        value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
+                                    <p class="invalid-feedback" id="error-nombre"></p>
+                                </div>
+
+                                <div>
+                                    <label>Teléfono</label>
+                                    <input type="tel"
+                                        class="form-control <%= locals.errors && locals.errors.telefono ? 'is-invalid' : null %> "
+                                        id="telefono" name="telefono"
+                                        value="<%= locals.old && locals.old.telefono ? old.telefono : null%>">
+                                    <p class="invalid-feedback" id="error-telefono"></p>
+                                </div>
+
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email"
+                                        class="form-control <%= locals.errors && locals.errors.email ? 'is-invalid' : null %> "
+                                        id="email" name="email">
+                                    <p class="invalid-feedback" id="error-email"></p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="segundo">
+
+                                <div class="form">
+                                    <label>Mensaje</label>
+                                    <textarea
+                                        class="form-control <%= locals.errors && locals.errors.mensaje ? 'is-invalid' : null %> "
+                                        id="mensaje" name="mensaje"></textarea>
+                                    <p class="invalid-feedback" id="error-mensaje"></p>
+                                </div>
+
+                                <div class="botones">
+                                    <input type="" style="display: none;">
+                                    <div>
+                                        <button type="submit">Enviar</button>
+                                        <button type="button">Cerrar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </main>
+            <!--Footer-->
+            <%-include('./partials/footer')%>
+                <!--Scripts-->
+                <%-include('./partials/scripts')%>
+
+                    <script src="/javascripts/contactoValidator.js"></script>
+
+
+
+    </body>
+
+</html>

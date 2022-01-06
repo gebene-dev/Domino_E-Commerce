@@ -1,0 +1,308 @@
+
+/* Sección 1 */
+
+.general {
+    background-color: var(--blanco);
+    width: 100%;
+}
+.detail-box{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+.detail-box .view{
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    width: 55%;
+}
+.view .view-1{
+    width: 100%;
+    padding: 15px;
+}
+.detail-box .view .view__multiple{
+    display:none;
+}
+
+/* Sección 2 */
+
+div.margen{
+    background-color: var(--blanco);
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+ol.breadcrumb {
+    margin: 10px 0px;
+}
+.product__details{
+    display: column;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 5px;
+}
+.product__details__money{
+    display: inline-block;
+    margin: 5px 0px;
+}
+.product_details__name{
+    font-family: 'Open Sans';
+    font-size: 26px;
+    margin: 0;
+}
+.product__details__color{
+    display:flex;
+}
+.cuotas__div{
+    margin: 10px 0px;
+    font-size: 18px;
+}
+.cuotas__minidiv{
+    margin: 10px 0;
+}
+.cuotas__totaldiv span, a {
+    font-family: 'Open Sans';
+}
+.cuotas__totaldiv a{
+    font-weight: bold;
+    margin-left: 10px;
+}
+.talle__div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0px;
+}
+.talle__div__titular{
+    font-weight: bold;
+    font-size: 24px;
+}
+.talle__div__size{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0;
+}
+.talle__div__size .btn-group, .btn-group-vertical{
+    width: 100%;
+}
+.talle__div__cantidad-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.talle__div__cantidad{
+    width: 15%;
+    border: 0;
+}
+.talle__div__cantidad-box .btn-dark{
+    width: 100%;
+}
+.discount__box{
+    display: flex;
+    margin: 0px;
+    background-color: wheat;
+    border: yellow 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.discount__box__icon{
+    background-clip: text;
+    font-size: 24px;
+    margin: 0px 3px;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.discount__box__lema{
+    margin: 0px 20px;
+}
+.discount__box__lema h3{
+    background-clip: text;
+    font-size: 24px;
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sección 3 */
+
+.padding-box{
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px ;
+    background-color: var(--blanco);
+}
+.contenedor__filter{
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.contenedor__filter p{
+    font-size: 18px;
+    color: gray;
+}
+.contenedor__filter__div{
+    text-align: right;
+}
+.contenedor__filter__select{
+    width: 50%;
+    border: 2px solid grey;
+    padding: 10px;
+}
+.comment-box{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid grey ;
+    border-top: 1px solid grey;
+}
+.comment-box__textarea{
+    padding: 10px;
+    width: 100%;
+    margin: 15px 0;
+    border: 0;
+    box-shadow: 0px 0px 53px -16px rgba(0,0,0,0.75);
+}
+.text-area-box .profile-icon{
+    display:none;
+}
+.comment-box .submit button{
+    width: 50vw;
+    height: 40px;
+    color:white;
+    background-color: black;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 0;
+    transition : all 450ms;
+}
+.comment-box .submit button:hover{
+    background-color: white;
+    color : black;
+}
+.padding-box .h2-box{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.padding-box .h2-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+.padding-box .recommended{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid grey;
+    padding: 10px 10px;
+}
+
+.recommended__2, .recommended__3{
+    display: none;
+}
+
+@media (min-width: 768px){
+
+    /*Sección 1*/
+
+    .detail-box{
+        flex-direction: row;
+        width: 100%;
+    }
+    .detail-box .view{
+        width: 100%;
+        padding-top: 15px;
+    }
+    .detail-box .view .view-1{
+        width: 100%;
+        padding: 0;
+    }
+    .view-1__carousel{
+        width: 100%;
+    }
+    .view-1__otherview{
+        display: none
+    }
+    .detail-box .view .view__multiple{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding: 0 10px;
+    }
+    .view__multiple__img{
+        width: 80%;
+        border-radius: 10px;
+        border: 0;
+        margin-bottom: 15px;
+    }
+    main.detail-box div.margen{
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        margin: 0;  
+    }
+    .detail-box .aside-box{
+        width: 100%;
+        padding: 10px;
+    }
+    .talle .form-2{
+        justify-content:baseline;
+    }
+    .talle .form-2 .cantidad{
+        width: 50px;
+    }
+    .text-area-box{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .comment-box textarea{
+        width: 100%;
+        color: grey;
+    }
+    .submit{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        margin-bottom: 20px
+    }
+    .comment-box .profile-icon{
+        display: inline-block;
+        font-size: 65px;
+        padding-top: 2%;
+        margin-right: 2%;
+    }
+    .recommended{
+        justify-content: space-evenly;
+    }
+    .recommended__2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px){
+    /*---------Main---------------*/
+    .talle .form-2{
+        display: flex;
+        justify-content: flex-start;
+        margin: 5px 0px;
+    }
+    .talle .size{
+        width: 120px;
+    }
+    .comment-box .text-area-box{
+        flex-direction: flex-start;
+        padding-right: 20px;
+    }
+    .recommended__3{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}

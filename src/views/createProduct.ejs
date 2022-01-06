@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<%-include('./partials/head')%> 
+
+<body class="carga-producto">
+
+    <%-include('./partials/header')%>
+    <main>
+        
+        <div class="container">
+    
+            <div class="formulario">
+    
+            <h3>Crear Producto</h3>
+            <form class="needs-validation" action="/products/createProduct" method="POST" id="form-register" enctype="multipart/form-data" novalidate>
+                <div class="primero">
+    
+                    <div class="form">
+                        <label>Nuevo producto</label>
+                        <input type="text" class="form-control" name="nombre" value= "<%= locals.old && old.nombre ? old.nombre : '' %>" required >
+                        <span class="small text-danger">
+                            <%= locals.errors && locals.errors.nombre ? errors.nombre.msg : null %>
+                        </span>
+                        <div class="invalid-feedback">
+                        Debes colocar un nombre
+                        </div>
+                    </div>
+    
+                    <div class="form">
+                        <label>Descripción del producto</label>
+                        <textarea class="form-control" id="" name="descripcion" value= "<%= locals.old && old.nombre ? old.nombre : '' %>" required></textarea>
+                        <span class="small text-danger">
+                            <%= locals.errors && locals.errors.descripcion ? errors.descripcion.msg : null %>
+                        </span>
+                        <div class="invalid-feedback">
+                        Debes escribir una descripción
+                        </div>
+                    </div>
+                    <div class="form">
+                        <label>Descuento</label>
+                        <input type="number" class="form-control" name="descuento" placeholder="Tu Descuento"  value= "<%= locals.old && old.descuento ? old.descuento : 0 %>" required>
+                        <span class="small text-danger">
+                            <%= locals.errors && locals.errors.descuento ? errors.descuento.msg : null %>
+                        </span>
+                    </div>
+                    <div class="form">
+                        <label>Precio</label>
+                        <input type="number" class="form-control" name="precio" placeholder="$$$" value= "<%= locals.old && old.precio ? old.precio : 0 %>" required> 
+                        <span class="small text-danger">
+                            <%= locals.errors && locals.errors.precio ? errors.precio.msg : null %>
+                        </span>
+                        <div class="invalid-feedback">
+                            El precio es obligatorio
+                        </div>   
+                    </div>
+    
+                    <div class="form">
+                        <label>Genero</label>
+                        <select class="form-select" name="genero" id="genero" required>
+                            <option value="" selected hidden>Elegir Genero</option>
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                            <option value="3">Unisex</option>
+                        </select>
+                        <span class="small text-danger">
+                            
+                        </span>
+                        <div class="invalid-feedback">
+                            Debes indicar un genero
+                        </div>
+                    </div> 
+                    
+                </div>
+        
+                <div class="segundo">
+    
+                    <div class="form">
+                        <label>Categoría</label>
+                        <select class="form-select" name="categoria" id="categorias" required>
+                            <option value="" hidden selected>Elegir Categoria</option>
+                            <% for( let i = 0; i < categorias.length; i++ ) { %>
+                                <option value="<%=i+1%>"><%= categorias[i].nombre %></option>
+                            <% } %>
+                        </select>
+                        <span class="small text-danger">
+                            
+                        </span>
+                        <div class="invalid-feedback">
+                            Debes indicar la categoría
+                        </div>
+                    </div>
+    
+                    <div class="form">
+                        <label>Talles</label>
+                         
+                        <div class="checkbox form-control <%= locals.errors && locals.errors.apellido ? 'is-invalid' : null %>" id="talles" required>
+                            <% for( let i = 0; i < talles.length; i++ ) { %>
+                                <input type="checkbox" name="talle" value="<%=i+1%>" class="size"><%= talles[i].talle %>
+                            <% } %>
+                        </div>
+                        <span class="small text-danger" id="error-talles">
+
+                        </span>
+                    </div>
+    
+                </div>
+    
+                <div class="tercero">
+
+                    <div class="form">
+                        <label>Imágenes</label>
+                        <div id="preview" class="previewProduct">
+                            <% imagenes.forEach(i => { %>
+                                <img src="/img/products/<% i.nombre %>" alt="">
+                            <% }) %>
+                        </div>
+                        <input type="file" class="form-control" id="file" name="image" accept="image/*" multiple required>
+                    </div>
+                        
+                    <div class="botones">
+                        <input type="" style="display: none;" >    
+                        <button type="submit">Publicar</button>
+                        <button type="button">Cerrar</button>
+                    </div>
+                    
+                </div>
+            </form>
+    
+         </div>
+    
+        </div>    
+    </main>
+    <!--Footer-->
+    <%-include('./partials/footer')%> 
+    <!--Scripts-->
+    <%-include('./partials/scripts')%> 
+    
+    <script src="/javascripts/validatorForms.js"></script>
+    
+    
+</body>
+</html>

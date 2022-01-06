@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- Header -->
+    <%-include('./partials/head')%>
+<!-- Header -->
+<body class="results">
+    <!-- Header -->
+        <%-include('./partials/header')%>
+    <!-- Header -->
+
+    <main>
+        
+        <% if (productos.length > 0) { %>
+
+            <div class="resultado">
+                <h4> Productos con <%=productos[0].descuento%>% de descuento </h4>
+            </div>
+            
+            <section>
+                <% for( let j = 0; j < imagenes.length; j++ ) { %>
+                    <article>
+                        <a href="/products/detail/<%= imagenes[j].Producto.id %>">
+                                <img src="/img/products/<%= imagenes[j].nombre %>" alt="">
+                        </a>
+                        <div class="datos">
+                            <div class="caja1">
+                                <a href="/products/detail/ <%= imagenes[j].Producto.id %> ">
+                                    <h4>
+                                        <%= imagenes[j].Producto.nombre %>
+                                    </h4>
+                                </a>                            
+                                <p>$ <%= imagenes[j].Producto.precio.toFixed(2) %>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                <% } %>   
+            </section> 
+
+        <% } else { %>
+            <div class="error">
+                <h4> No hay descuentos disponibles <i class="far fa-frown"></i></h3>
+            </div>
+        <% } %>
+         
+         
+
+    </main>
+
+
+
+
+    <!-- Footer -->
+        <%- include('./partials/footer')%>
+    <!-- Footer -->
+    <!-- Scripts -->
+        <%-include('./partials/scripts')%>    
+    <!-- Scripts -->
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Esto es el Head-->
+    <%- include('./partials/head') %>
+<!--Esto es el Head-->
+<body class="login">
+    <!--Esto es el header-->
+        <%-include('./partials/header')%>
+    <!--Esto es el header-->
+    <main class="login-main">
+        <form action="./login" method="POST" id="form-login">
+            <section class="tengo-cuenta">
+                <h3>Iniciá sesión en Domino</h3>
+                <p id="error-empty" class="text-danger"></p>
+                    <div class="tengo-cuenta__div">
+                        <label for="email">Email</label>
+                        <input type="email" class= "form-control <%= locals.errors && locals.errors.email ? 'is-invalid' : null %> " id="email" name="email" value= "<%= locals.old && old.email ? old.email : '' %>">
+                        <p class="feedback" id="error-email">
+                            <%= locals.errors && locals.errors.email ? errors.email.msg : null %>
+                        </p>
+                        <div>
+                            <label for="contraseña">Contraseña</label>
+                            <div class="contain">
+                                <input type="password" class="passw form-control <%= locals.errors && locals.errors.password ? 'is-invalid' : null %> " id="password" name="password">
+                                <img onclick="passwordInput()" src="/img/Show.png" alt="" class="icon" id="eye">
+                            </div>
+                            <p class="feedback" id="error-password">
+                                <%= locals.errors && locals.errors.password ? errors.password.msg : null %>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" name="recordar">
+                        <label for="remember">Recordarme</label>
+                    </div>
+                    <p class="forgot-me"><a href="" >¿Olvidaste tu contraseña?</a></p>
+                    <button type="submit" class="btn btn-dark"><a class="white">ingresar</a></button>
+            </section>
+        
+
+            <section class="ingresar">
+
+                <article>
+                    <p>¿Sos nuevo usuario?</p>
+                    <a href="./register"><button type="button" class="btn btn-dark">Registrate</button></a>
+                </article>
+
+                <article class="ingresar__redes">
+                    <button type="button" class="ingresar__redes__button">
+                        <div class="ingresar__redes__icon">
+                        <i class="fab fa-facebook-square"></i> 
+                        </div>
+                        <p>Ingresar con Facebook</p>
+                    </button>
+                    
+                </article>
+                
+                <article class="ingresar__redes">
+                    <button type="button" class="ingresar__redes__button">
+                        <div class="ingresar__redes__icon">
+                            <i class="fab fa-google"></i> 
+                        </div>
+                        <p>Ingresar con Google</p></button>
+                </article>
+
+                
+            </section>
+
+
+        </form>
+
+            <!-- <section class="ingresar">
+                <article>
+                    <p>Utilizar mi cuenta de Facebook</p>
+                    <button class="ingresar__button">ingresar desde facebook</button>
+                </article>
+                <article>
+                    <p>Utilizar mi cuenta de Google</p>
+                    <button class="ingresar__button">ingresar desde google</button>
+                </article>
+                <article>
+                    <p>¿Sos nuevo usuario?</p>
+                    <a href="./register"><button type="button" class="btn btn-dark">Registrate</button></a>
+                </article>
+            </section> -->
+        
+    </main>
+<!--Scripts & Footer-->
+    <%- include('./partials/scripts') %> 
+        <%- include('./partials/footer') %> 
+<!--Scripts & Footer-->
+    <!-- <script src="/javascripts/loginValidator.js"></script> -->
+
+    <script>
+    
+        function passwordInput(){
+            
+            var eye = document.getElementById('eye');
+            var input = document.getElementById('password');
+
+            if (input.type == "password") {
+                input.type = "text"
+                eye.style.opacity = 0.8;
+            }else{
+                input.type = "password"
+                eye.style.opacity = 0.2;
+            }
+        }
+    </script>
+
+</body>
+</html>

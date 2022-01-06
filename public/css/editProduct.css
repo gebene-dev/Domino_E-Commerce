@@ -1,0 +1,173 @@
+/*----MAIN----*/
+.editar-producto main{
+    width: 100%;
+    padding: 20px 5px;
+    background-color: var(--blanco);
+}
+
+.editar-producto main .formulario {
+    border: 3px solid rgb(167, 165, 165);
+    border-radius: 8px;
+}
+
+.editar-producto main h3{
+    padding: 20px 20px 0 20px;
+    text-transform: uppercase;
+    margin-bottom: 0px
+}
+/*---FORMULARIO---*/
+.editar-producto main form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.editar-producto main form .primero .segundo{
+    display: flex;
+    flex-direction: column;
+}
+.editar-producto .primero .form .img{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: center;
+    border: solid 1px black;
+}
+
+.editar-producto .primero .form .img p{
+    text-align: center;
+}
+.editar-producto .primero .form .galeria{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.editar-producto .primero .form .galeria button{
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 4px;
+    border-top: none;
+    padding: 4px;
+}
+.editar-producto .primero .form .galeria input{
+    position: absolute;
+    opacity: 0;
+    padding: 4px;
+    height: 100%;
+    width: 100%;
+}
+
+.editar-producto main .primero .form, .editar-producto main .segundo .form, .editar-producto main .tercero .form{
+    display: flex;
+    flex-direction: column;
+}
+.editar-producto main .segundo .form .checkbox{
+    display: flex;
+    flex-direction: column;
+    height: 215px;
+    flex-wrap: wrap;
+}
+.editar-producto main .segundo .form .checkbox .size{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.editar-producto main .form{
+    margin-bottom: 15px;
+}
+
+.editar-producto main .form input{
+    padding: 4px;
+    color: black;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+.editar-producto main .form select{
+    padding: 4px;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+.editar-producto main .tercero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.editar-producto main .tercero .botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.editar-producto main .tercero .botones button{
+    width: 60%;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: black;
+    color: var(--blanco);
+    border: none;
+    border-radius: 4px;
+}
+.editar-producto .tercero .botones button:hover{
+    background-color: rgb(202, 198, 198);
+    color: black;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+/* Editar Producto */
+.editar-producto .segundo .form .edit-number, .editar-producto .tercero .form .edit-number{
+    display: flex;
+}
+.editar-producto .segundo .form .edit-number label, .editar-producto .tercero .form .edit-number label{
+    width: 15%;
+    border: solid 1px black;
+    background-color: white;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+}
+.editar-producto .segundo .form .edit-number input, .editar-producto .tercero .form .edit-number input{
+    width: 85%;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+}
+
+@media (min-width: 768px){
+    /*----MAIN----*/
+    .editar-producto main{
+        padding: 50px;
+    }
+    .editar-producto main form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .editar-producto main form .primero, .editar-producto main form .segundo{
+        width: 45%;
+    }
+    .editar-producto main form .tercero{
+        width: 100%;
+        flex-direction: row;
+    }
+    .editar-producto main form .tercero .form, .editar-producto main form .tercero .botones{
+        width: 45%;
+    }
+    
+}
+@media (min-width: 1024px){
+    /*----MAIN----*/
+    .editar-producto main form{
+        padding: 20px 80px;
+        font-size: 20px;
+    }
+    .editar-producto main form .primero, .editar-producto main form .segundo, .editar-producto main form .tercero{
+        width: 30%;
+    }
+    .editar-producto .primero .form .img{
+        height: 180px;
+    }
+    .editar-producto main form .tercero{
+        flex-direction: column;
+    }
+    .editar-producto main form .tercero .form, .editar-producto main form .tercero .botones{
+        width: 100%;
+    }
+}

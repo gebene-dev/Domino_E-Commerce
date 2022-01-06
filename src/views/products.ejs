@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<%- include('./partials/head') %> 
+
+<body>
+    <!--Header-->
+    <%- include('./partials/header')  %>
+    
+    <main class="paginador">
+        <div>
+            <div class="table-responsive" >
+        
+        <div class="card-body">
+            <nav class="d-flex justify-content-center" style="padding-top: 20px;">
+                <ul class="pagination pagination-sm" id="box-paginator">
+                    
+                </ul>
+              </nav>
+            <table class="table table-hover">
+                <thead>
+                  <tr style="height: 70px;border-bottom-width: 1px;">
+                    <th scope="col" style="text-align: center;">Cod</th>
+                    <th scope="col" style="text-align: center;">Imagen</th>
+                    <th scope="col" style="text-align: center;">Producto</th>
+                    <th scope="col" style="text-align: center;">Precio</th>
+                    <th scope="col" style="text-align: center;">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="table-products">
+                             
+                </tbody>
+              </table>
+        </div>
+    
+        </div>
+    </div>
+
+    </main>
+
+    <!--Footer-->
+    <%- include('./partials/footer')  %> 
+
+
+<%- include('./partials/scripts') %>   
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="/javascripts/admin.js"></script>
+
+</body>
+</html>

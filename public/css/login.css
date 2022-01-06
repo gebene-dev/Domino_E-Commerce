@@ -1,0 +1,243 @@
+.login{
+    font-family: 'Open Sans', 'Roboto';
+    background-color: var(--blanco);
+}
+.login .white{
+    color: var(--blanco);
+}
+/* tengo-cuenta */
+.login .tengo-cuenta{
+    border: 0;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px 10px;
+    box-shadow: 0px 0px 11px 3px rgba(145,145,145,0.64);
+}
+.login .tengo-cuenta h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: normal;
+}
+.login .tengo-cuenta .tengo-cuenta__div{
+    margin: 15px 0 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 0;
+    font-family: 'Roboto';
+}
+.login .tengo-cuenta .form-control{
+    padding: 5px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: black;
+    border: 0;
+    box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+}
+.login .remember label, input{
+    display: inline-block;
+    color: gray;
+    font-weight: normal;
+}
+
+.login .tengo-cuenta .forgot-me{
+    text-align: right;
+    font-weight: normal;
+    font-style: normal;
+}
+.login .tengo-cuenta button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border-radius: 6px;
+    border: none;
+    margin: 5px 0;
+}
+/* ingresar */
+
+
+.login .ingresar{
+   
+    padding: 0 30px;
+}
+.login .ingresar article p{
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+/* .iniciar-sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+.iniciar-sesion a{
+    color:white
+}
+.ingresar .iniciar-sesion button{
+    width: 80%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.ingresar .iniciar-sesion button{
+    color: grey;
+}
+.login .ingresar .iniciar-sesion p {
+    text-align: center;
+} */
+
+
+.ingresar__redes__button{
+    display: flex;
+    justify-content: center;
+}
+.ingresar__redes__icon{
+    margin: 5px;
+}
+.ingresar__redes__ico .fa-facebook-square{
+    width: 100%;
+    padding: 10px;
+}
+.ingresar__redes__button p {
+    margin: 7px;
+}
+.login .ingresar__redes button{
+    width: 100%;
+    padding: 4px;
+    border: 0px;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+
+
+
+
+
+/* .login .ingresar{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 11px 3px rgba(145,145,145,0.64);
+    border: 0;
+    border-radius: 6px;
+    margin: 20px 10px;
+    padding: 20px;
+} */
+.login .ingresar p{
+    font-weight: bold;
+}
+.login .ingresar .ingresar__button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 60%;
+    text-transform: uppercase;
+    color: grey;
+    border-radius: 6px;
+    border: 0;
+    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+.login .ingresar .btn-dark{
+    background-color:black;
+    color:white;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+@media (min-width: 768px){
+    .register main{
+        display: flex;
+        flex-direction: column;
+    }
+    .login .tengo-cuenta{
+        padding: 30px;
+       
+    }
+    .login .ingresar button{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 6px;
+    }
+}
+@media (min-width: 1024px){
+    .login-main form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .login .tengo-cuenta{
+        width: 40%;
+        margin: 60px;
+    }
+    .login .ingresar{
+        width: 30%;
+        padding: 0px;
+    }
+    .login .ingresar{
+        border-radius: 60px;
+        margin: 25px 0px 60px;
+    }
+    .login .ingresar article p{
+        font-size: 18px;
+    }
+}
+
+
+/* Eye */
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+   /*  width: 300px;
+    background-color: white; */
+    position: relative;
+    /* box-shadow: 3px 3px 3px rgb(0 0 0 / 5%); */
+}
+
+.passw{
+    outline: none;
+    /* width: 100%;
+    background-color: white;
+    color: #121212;
+    border: none; */
+    position: absolute;
+    /* top: 8px;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    padding-left: .5rem;
+    box-sizing: border-box;
+    font-size: 20px; */
+}
+
+.icon{
+    position: absolute;
+    height: 60%;
+    position: absolute;
+    top: 33%;
+    right: 8px;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    cursor: pointer;
+    right: 4%;
+}
+
+.icon:hover{
+    opacity: 0.8;
+}

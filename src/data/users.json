@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sol",
+    "apellido": "cete",
+    "email": "sol@gmail.com",
+    "password": "$2a$10$xqfGthkqeZLkt6aKMpdtgexem.ZyHix8g5wRHd5Ay9tMT4qiYdq32",
+    "birthday": "1995-07-03",
+    "rol": "user",
+    "avatar": "default-profile-image.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Usuario",
+    "apellido": "Comun",
+    "email": "pepe@gmail.com",
+    "password": "$2a$10$A/i5m/55LRF7K0Er.UzjCOVoD.XnqKyBUrRZa0sz5Cshvu/9u/aWC",
+    "birthday": "2021-08-04",
+    "rol": "user",
+    "avatar": "default-profile-image.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Freddy",
+    "apellido": "Fufis",
+    "email": "michael.spivak@gmail.com",
+    "password": "$2a$10$yWYe79OUAWNU7M8SNYvP3eiEMiYflN32gglhgEKwMYekpIXomcRca",
+    "birthday": "2021-08-05",
+    "rol": "admin",
+    "avatar": "1631637980651.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Alicia",
+    "apellido": "Rotzank",
+    "email": "dross@k.com",
+    "password": "$2a$10$Hk4Zo3HdXspWA9sRagvhxeksczYPO2Oo7XU0E0h/D4fUq5U1MQ78q",
+    "birthday": "2021-09-22",
+    "rol": "user",
+    "avatar": "default-profile-image.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "John",
+    "apellido": "Coltrane",
+    "email": "john.coltrane@gmail.com",
+    "password": "$2a$10$6oTC7hlTIexhMNaRGK3AquosZlko/Cxr.3scCtMspu76WimjpJCGS",
+    "birthday": "2021-10-05",
+    "rol": "user",
+    "avatar": "default-profile-image.jpg"
+  }
+]

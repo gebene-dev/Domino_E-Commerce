@@ -1,0 +1,16 @@
+@import url('./general.css');
+@import url('./header-footer.css');
+@import url('glider.css');
+@import url('./home.css');
+@import url('./register.css');
+@import url('./carrito.css');
+@import url('./detalle.css');
+@import url('./login.css');
+@import url('./createProduct.css');
+@import url('./editProduct.css');
+@import url('./products.css');
+@import url('./results.css');
+@import url('./profileUser.css');
+@import url('./vistas.css');
+@import url('./contacto.css');
+@import url('./paginador.css');

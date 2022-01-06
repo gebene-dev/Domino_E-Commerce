@@ -1,0 +1,648 @@
+[
+  {
+    "id": 1,
+    "seccion": "principal",
+    "name": "Remera Switch",
+    "price": 1900,
+    "colors": [
+      "#656666",
+      "#0c0c0c",
+      "#641717"
+    ],
+    "image": [
+      "remera-switch-1.jpg",
+      "remera-switch-2.jpg",
+      "remera-switch-3.jpg",
+      "remera-switch-4.jpg"
+    ],
+    "category": "Remeras",
+    "talle": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 2,
+    "seccion": "principal",
+    "name": "Campera Row",
+    "price": 9600,
+    "colors": [
+      "#000000",
+      "#9c9c93",
+      "#fdfffd"
+    ],
+    "image": [
+      "campera-row-1.jpg",
+      "campera-row-2.jpg",
+      "campera-row-3.jpg",
+      "campera-row-4.jpg"
+    ],
+    "category": "Camperas",
+    "talle": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 3,
+    "seccion": "principal",
+    "name": "Camiseta size",
+    "price": 1800,
+    "colors": [
+      "#000000",
+      "#fcf9fb",
+      "#a33724"
+    ],
+    "image": [
+      "camiseta-size-1.jpg",
+      "camiseta-size-2.jpg",
+      "camiseta-size-3.jpg",
+      "camiseta-size-4.jpg"
+    ],
+    "category": "Camisetas",
+    "talle": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 4,
+    "seccion": "seleccionado1",
+    "clase": "art1",
+    "name": "Mochila Power",
+    "price": 5500,
+    "colors": [
+      "#000000",
+      "#494a50",
+      "#13173d"
+    ],
+    "image": [
+      "mochila-adidas-1.png",
+      "mochila-adidas-2.jpg",
+      "mochila-adidas-3.jpg",
+      "mochila-adidas-4.jpg"
+    ],
+    "category": "Mochilas",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 5,
+    "seccion": "seleccionado1",
+    "clase": "art2",
+    "name": "Zapatillas Zoom",
+    "price": 14900,
+    "colors": [
+      "#fafcfc",
+      "#070707",
+      "#81747f"
+    ],
+    "image": [
+      "zapa-air-zoom-1.png",
+      "zapa-air-zoom-2.png",
+      "zapa-air-zoom-3.png",
+      "zapa-air-zoom-4.png"
+    ],
+    "category": "Zapatillas",
+    "talle": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 6,
+    "seccion": "seleccionado1",
+    "clase": "art3",
+    "name": "Bolso Res",
+    "price": 4200,
+    "colors": [
+      "#000000",
+      "#fcf9fb",
+      "#611f50"
+    ],
+    "image": [
+      "bolso-res-1.png",
+      "bolso-res-2.png",
+      "bolso-res-3.png",
+      "bolso-res-4.png"
+    ],
+    "category": "Bolsos",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 7,
+    "seccion": "seleccionado1",
+    "clase": "art5",
+    "name": "Riñonera Unix",
+    "price": 5200,
+    "colors": [
+      "#000000",
+      "#fcf9fb",
+      "#3b380e"
+    ],
+    "image": [
+      "riñonera-piet3-1.png",
+      "riñonera-piet3-2.png",
+      "riñonera-piet3-3.png",
+      "riñonera-piet3-4.png"
+    ],
+    "category": "Riñoneras",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 8,
+    "seccion": "seleccionado2",
+    "clase": "art1",
+    "name": "Bolso Active",
+    "price": 6500,
+    "colors": [
+      "#000000",
+      "#494a50",
+      "#13173d"
+    ],
+    "image": [
+      "bolso-active-1.png",
+      "bolso-active-2.png",
+      "bolso-active-3.png",
+      "bolso-active-4.png"
+    ],
+    "category": "Bolsos",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 9,
+    "seccion": "seleccionado2",
+    "clase": "art2",
+    "name": "Zapatillas Cliff",
+    "price": 12800,
+    "colors": [
+      "#fafcfc",
+      "#070707",
+      "#550f24"
+    ],
+    "image": [
+      "zapa-cliff-1.png",
+      "zapa-cliff-2.png",
+      "zapa-cliff-3.png",
+      "zapa-cliff-4.png"
+    ],
+    "category": "Zapatillas",
+    "talle": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 10,
+    "seccion": "seleccionado2",
+    "clase": "art3",
+    "name": "Mochila One",
+    "price": 6900,
+    "colors": [
+      "#fafcfc",
+      "#070707",
+      "#9ea371"
+    ],
+    "image": [
+      "mochila-one-1.png",
+      "mochila-one-2.png",
+      "mochila-one-3.png",
+      "mochila-one-4.png"
+    ],
+    "category": "Mochilas",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 11,
+    "seccion": "seleccionado2",
+    "clase": "art5",
+    "name": "Gorra Piet II",
+    "price": 4800,
+    "colors": [
+      "#000000",
+      "#fcf9fb",
+      "#753f68"
+    ],
+    "image": [
+      "gorra-piet-1.png",
+      "gorra-piet-2.png",
+      "gorra-piet-3.png",
+      "gorra-piet-4.png"
+    ],
+    "category": "Gorras",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 12,
+    "seccion": "seleccionado3",
+    "clase": "art1",
+    "name": "Zapatillas Run",
+    "price": 7500,
+    "colors": [
+      "#fdfcfc",
+      "#494a50",
+      "#0a0a0a"
+    ],
+    "image": [
+      "zapa-runfalcon-1.png",
+      "zapa-runfalcon-2.png",
+      "zapa-runfalcon-3.png",
+      "zapa-runfalcon-4.png"
+    ],
+    "category": "Zapatillas",
+    "talle": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 13,
+    "seccion": "seleccionado3",
+    "clase": "art2",
+    "name": "Riñonera Class",
+    "price": 4900,
+    "colors": [
+      "#000000",
+      "#fcf9fb",
+      "#611f50"
+    ],
+    "image": [
+      "riñonera-piet2-1.png",
+      "riñonera-piet2-2.png",
+      "riñonera-piet2-3.png",
+      "riñonera-piet2-4.png"
+    ],
+    "category": "Riñoneras",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 14,
+    "seccion": "seleccionado3",
+    "clase": "art3",
+    "name": "Gorra Piet",
+    "price": 4800,
+    "colors": [
+      "#000000",
+      "#24049b",
+      "#838282"
+    ],
+    "image": [
+      "gorra-piet2-1.png",
+      "gorra-piet2-2.png",
+      "gorra-piet2-3.png",
+      "gorra-piet2-4.png"
+    ],
+    "category": "Gorras",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 15,
+    "seccion": "seleccionado3",
+    "clase": "art5",
+    "name": "Riñonera Mou",
+    "price": 10200,
+    "colors": [
+      "#000000",
+      "#1f1553",
+      "#524d50"
+    ],
+    "image": [
+      "riñonera-piet-1.png",
+      "riñonera-piet-2.png",
+      "riñonera-piet-3.png",
+      "riñonera-piet-4.png"
+    ],
+    "category": "Riñoneras",
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 16,
+    "seccion": "destacado1",
+    "clase": "art1",
+    "name": "Campera Michigan",
+    "price": 7200,
+    "colors": [
+      "#000000",
+      "#757274",
+      "#0c0849"
+    ],
+    "image": [
+      "campera-michigan-1.jpg",
+      "campera-michigan-2.jpg",
+      "campera-michigan-3.jpg",
+      "campera-michigan-4.jpg"
+    ],
+    "category": "Camperas",
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 17,
+    "seccion": "destacado",
+    "clase": "art2",
+    "name": "Palazzo Frizado",
+    "price": 4800,
+    "colors": [
+      "#000000",
+      "#cf7fb7",
+      "#a1a1a1"
+    ],
+    "image": [
+      "palazzo-frizado-1.jpg",
+      "palazzo-frizado-2.jpg",
+      "palazzo-frizado-3.jpg",
+      "palazzo-frizado-4.jpg"
+    ],
+    "category": "Pantalones",
+    "talle": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 18,
+    "seccion": "destacado",
+    "clase": "art3",
+    "name": "Pantalón Tamesis",
+    "price": 5200,
+    "colors": [
+      "#8d623a",
+      "#305e66",
+      "#ca9912"
+    ],
+    "image": [
+      "pantalon-tamesis-1.jpg",
+      "pantalon-tamesis-2.jpg",
+      "pantalon-tamesis-3.jpg",
+      "pantalon-tamesis-4.jpg"
+    ],
+    "category": "Pantalones",
+    "talle": [
+      42,
+      44,
+      46,
+      48
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 19,
+    "seccion": "destacado",
+    "clase": "art4",
+    "name": "Conjunto Slouchy",
+    "price": 9200,
+    "colors": [
+      "#5a5c07",
+      "#5c555a",
+      "#6d5410"
+    ],
+    "image": [
+      "conjunto-slouchy-1.jpg",
+      "conjunto-slouchy-2.jpg",
+      "conjunto-slouchy-3.jpg",
+      "conjunto-slouchy-4.jpg"
+    ],
+    "category": "Conjuntos",
+    "talle": [
+      1,
+      2,
+      3
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 20,
+    "seccion": "destacado",
+    "clase": "art1",
+    "name": "Conjunto Function",
+    "price": 8400,
+    "colors": [
+      "#000000",
+      "#757274",
+      "#861252"
+    ],
+    "image": [
+      "conjunto-function-1.jpg",
+      "conjunto-function-2.jpg",
+      "conjunto-function-3.jpg",
+      "conjunto-function-4.jpg"
+    ],
+    "category": "Conjuntos",
+    "talle": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 21,
+    "seccion": "destacado",
+    "clase": "art2",
+    "name": "Campera Tisza",
+    "price": 4800,
+    "colors": [
+      "#000000",
+      "#fdfdfc",
+      "#a1a1a1"
+    ],
+    "image": [
+      "campera-tisza-1.jpg",
+      "campera-tisza-2.jpg",
+      "campera-tisza-3.jpg",
+      "campera-tisza-4.jpg"
+    ],
+    "category": "Camperas",
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 22,
+    "seccion": "destacado",
+    "clase": "art3",
+    "name": "Conjunto Else",
+    "price": 7600,
+    "colors": [
+      "#af6464",
+      "#5c555a",
+      "#c2b969"
+    ],
+    "image": [
+      "conjunto-else-1.jpg",
+      "conjunto-else-2.jpg",
+      "conjunto-else-3.jpg",
+      "conjunto-else-4.jpg"
+    ],
+    "category": "Conjuntos",
+    "talle": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 23,
+    "seccion": "destacado",
+    "clase": "art1",
+    "name": "Remera Saona",
+    "price": 1800,
+    "colors": [
+      "#fdfdfc",
+      "#494a50",
+      "#0a0a0a"
+    ],
+    "image": [
+      "remera-saona-1.jpg",
+      "remera-saona-2.jpg",
+      "remera-saona-3.jpg",
+      "remera-saona-4.jpg"
+    ],
+    "category": "Sweater",
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "descripcion": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 24,
+    "seccion": "destacado",
+    "clase": "art1",
+    "name": "Sweater Holme",
+    "price": 5200,
+    "colors": [
+      "#632e2e",
+      "#494a50",
+      "#0a0a0a"
+    ],
+    "image": [
+      "sweater-holme-1.jpg",
+      "sweater-holme-2.jpg",
+      "sweater-holme-3.jpg",
+      "sweater-holme-4.jpg"
+    ],
+    "category": "Sweater",
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "descripcion": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 25,
+    "seccion": "destacado",
+    "clase": "art2",
+    "name": "Pantalón Let",
+    "price": 5800,
+    "colors": [
+      "#fafcfc",
+      "#070707",
+      "#a82f11"
+    ],
+    "image": [
+      "pantalon-let-1.jpg",
+      "pantalon-let-2.jpg",
+      "pantalon-let-3.jpg",
+      "pantalon-let-4.jpg"
+    ],
+    "categoria": "Pantalones",
+    "talle": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 26,
+    "seccion": "destacado",
+    "clase": "art3",
+    "name": "Remera Arrow",
+    "price": 1800,
+    "colors": [
+      "#000000",
+      "#fcf9fb",
+      "#6e686d"
+    ],
+    "image": [
+      "remera-arrow-1.jpg",
+      "remera-arrow-2.jpg",
+      "remera-arrow-3.jpg",
+      "remera-arrow-4.jpg"
+    ],
+    "category": "Remeras",
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  },
+  {
+    "id": 27,
+    "seccion": "destacado",
+    "clase": "art4",
+    "name": "Camiseta Angora",
+    "price": 2800,
+    "colors": [
+      "#adbd66",
+      "#fcf9fb",
+      "#b38aac"
+    ],
+    "image": [
+      "camiseta-angora-1.jpeg",
+      "camiseta-angora-2.jpeg",
+      "camiseta-angora-3.jpeg",
+      "camiseta-angora-4.jpeg"
+    ],
+    "category": "Camisetas",
+    "talle": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "description": "lorem ipsum dolor amet sit"
+  }
+]

@@ -1,0 +1,241 @@
+.register{
+    font-family: 'Raleway';
+    background-color: var(--blanco);
+}
+
+/* datos personales */
+.feedback{
+    color: red;
+}
+.register .primero{
+    display: flex;
+    flex-direction: column;
+}
+.register .datos-personales{
+    background-color: var(--blanco);
+    border: 0;
+    border: 3px inset rgba(65,68,62,0.19);
+    border-radius: 0px 40px 0px 40px;
+    padding: 20px;
+    margin: 20px 10px;
+}
+.register .datos-personales h3{
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+.register .datos-personales .datos label{
+    font-family: 'Raleway';
+}
+.register .datos-personales .datos input{
+    padding: 5px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: black;
+    border: 0;
+    box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+}
+.register .datos-personales p{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.register .datos-personales .birthday input{
+    text-align: left;
+    padding: 6px;
+}
+.register .datos-personales .birthday label{
+    display: block;
+    font-family: 'Raleway';
+}
+.register .datos-personales .checkbox{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.register .datos-personales .checkbox a{
+    color: rgb(97, 97, 97);
+}
+.register .datos-personales .checkbox label{
+    color: var(--negro);
+    font-weight: normal;
+}
+.register .boton-registro{
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register .boton-registro a {
+    color: white;
+}
+.register .boton-registro a:hover {
+    color: grey;
+}
+.register .registrame{
+    width: 65%;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+}
+.register .info-importante{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 15px;
+    font-size: 13px;
+}
+.register .info-importante h4{
+    text-align: center;
+    background-clip: text;
+    background: rgb(211,236,0);
+    background: linear-gradient(0deg, rgba(211,236,0,1) 0%, rgba(191,126,27,1) 100%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.register .info-importante p{
+    text-align: center;
+}
+/* Iniciar sesion */
+.register .ingresar{
+    margin: 35px;
+    padding: 0 30px;
+}
+.register .ingresar article p{
+    font-weight: bold;
+    font-size: 14px;
+}
+.iniciar-sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+.iniciar-sesion a{
+    color:white
+}
+.ingresar .iniciar-sesion button{
+    width: 80%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.ingresar .iniciar-sesion button{
+    color: grey;
+}
+.register .ingresar .iniciar-sesion p {
+    text-align: center;
+}
+.ingresar__redes__button{
+    display: flex;
+    justify-content: center;
+}
+.ingresar__redes__icon{
+    margin: 5px;
+}
+.ingresar__redes__ico .fa-facebook-square{
+    width: 100%;
+    padding: 10px;
+}
+.ingresar__redes__button p {
+    margin: 7px;
+}
+.ingresar__redes button{
+    width: 40%;
+    padding: 4px;
+    border: 0px;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+
+.form-date__input[type="date"] {
+   
+    display: inline-block;
+    visibility: visible;
+   
+    position: relative;
+}
+.form-date__input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: 0 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    pointer-events: auto;
+}
+.form-date__input[type="date"] {
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+.form-date__input[type="date"]::-webkit-inner-spin-button,
+.form-date__input[type="date"]::-webkit-outer-spin-button,
+.form-date__input[type="date"]::-webkit-clear-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+
+@media (min-width: 768px){
+    .register main{
+        display: flex;
+        flex-direction: column;
+    }
+    .register .datos-personales{
+        width: 60%;
+        align-self: center;
+        margin: 35px 0;
+    }
+    .ingresar .iniciar-sesion button{
+        width: 40%;
+    }
+    .ingresar__redes{
+        display: flex;
+        justify-content: center;
+    }
+    .ingresar__redes button{
+        width: 40%;
+    }
+}
+@media (min-width: 1024px){
+
+    .register .primero {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px 15px 15px;
+    }
+    .register .datos-personales{
+        margin: 40px 0;
+        padding: 50px;
+    }
+    .register .info-importante{
+        font-size: 14px;
+        padding: 0 25px 20px 25px;
+    }
+
+}
+@media (min-width: 1024px){
+    .register .ingresar article{
+        padding: 0 80px;
+    }
+    .register .ingresar article p {
+        font-size: 18px;
+    }
+    .register .ingresar article button{
+        font-size: 16px;
+    }
+}
+

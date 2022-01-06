@@ -1,0 +1,126 @@
+/*Mobile Width*/
+
+.body_profileUser{
+    font-family: 'Raleway';
+    background-color: var(--blanco);
+}
+
+.feedback{
+    color: red;
+}
+.section_profileUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.greeting_profileUser{
+    color: black;
+    margin: 10px;
+    font-size: 24px;
+}
+.myinfo_profileUser_photo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco);
+    border: 0;
+    padding: 20px;
+    margin: 20px 10px;
+    box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+}
+.myinfo_profileUser{
+    border: 3px inset rgba(65,68,62,0.19);
+    border-radius: 0px 40px 0px 40px;
+    padding: 20px;
+    margin: 20px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco);
+}
+.myinfo_profileUser h3{
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+.myinfo_form_profileUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myinfo_form_profileUser label{
+    font-family: 'Raleway';
+}
+.myinfo_form_profileUser input{
+    padding: 5px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: black;
+    border: 0;
+    box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+}
+.myinfo_form_profileUser p{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.profilePicture_user {
+    width: 100%;
+    border-radius: 25%;
+    margin: 10px 0;
+    padding: 10px;
+}
+.uploadPhoto {
+    width: 100%;
+    border-radius: 25%;
+    margin: 10px 0;
+    padding: 10px;
+}
+.updatePhoto img{
+    width: 100%;
+    border-radius: 25%;
+    margin: 10px 0;
+    padding: 10px;
+}
+.back-to-home{
+    margin: 20px 0;
+}
+
+/* Tablet 768px  */
+
+@media (min-width: 768px){
+    
+    .greeting_profileUser{
+        color: black;
+        margin: 15px 0;
+        font-size: 32px;
+    }
+    .body_profileUser main{
+        display: flex;
+        flex-direction: column;
+    }
+    .myinfo_profileUser{
+        width: 60%;
+        align-self: center;
+        margin: 35px 0;
+    }
+}
+
+/* Desktop 1024px */
+@media (min-width: 1024px){
+
+    .section_profileUser {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px 15px 15px;
+    }
+    .myinfo_profileUser{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 40px 0;
+    }
+    .myinfo_profileUser_photo{
+        width: 50%;
+    }
+}

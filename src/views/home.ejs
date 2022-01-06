@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head')  %> 
+<body class="home">
+
+    <%- include('./partials/header')  %>
+
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/products/super-sale.jpg" class="imagen1" alt="humo-azul">
+                    <img src="/img/products/super-sale2.jpg" class="imagen2" alt="humo-azul">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/products/circulo-a.jpg" class="imagen1" alt="circulo">
+                    <img src="/img/products/3.jpg" class="imagen2" alt="circulo">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/products/1.jpg" class="imagen1" alt="imagen1">
+                    <img class="imagen2" src="/img/products/2.jpg" alt="imagen2">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container-fluid">
+            <div class="primero">
+                <section>
+                    <% principales.forEach(producto=> { %>
+                        <article>
+                            <a class="a-art-pri" href="/products/detail/ <%= producto.id %> ">
+                            <img src="/img/products/<%= producto.image[0] %>" alt="">
+                            <div class="datos">
+                                <div class="caja1">
+                                    <h4>
+                                        <%= producto.name %>
+                                    </h4>
+                                    <p>$ <%= toThousand(producto.price) %>
+                                    </p>
+                                </div>
+                                <div class="caja2">
+                                    <div>
+                                        <div class="color-circle" style=<%='background-color:' +
+                                            producto.colors[0] %>></div>
+                                        <div class="color-circle" style=<%='background-color:' +
+                                            producto.colors[1] %>></div>
+                                        <div class="color-circle" style=<%='background-color:' +
+                                            producto.colors[2] %>></div>
+                                    </div>
+                                    <div class="heart"><i class="far fa-heart"></i></div>
+                                </div>
+                                <span>¡Envio Gratis!</span>
+                            </div>
+                        </a>
+                        </article>
+                        <% }) %>
+                  
+                </section>
+                <div class="homb-salta">
+                    <img class="hombre-salta1" src="/img/products/hombre-salta.jpg" alt="hombre-salta">
+                    <img class="hombre-salta2" src="/img/products/hombre-salta2.jpg" alt="hombre-salta2">
+                </div>
+            </div>
+
+            <div class="segundo">
+                <section class="seleccion">
+                    <img class="escalera" src="/img/products/escalera1.jpg" alt="escalera">
+                    <div class="carrusel-seleccionado">
+                        <div>
+                            <p>Seleccionado para vos</p>
+                            <hr class="seleccionados">
+                        </div>
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <section class="articulos">
+                                        <% seleccionados1.forEach(producto=> { %>
+                                            <article class="<%= producto.clase %>">
+                                                <a class="a-art" href="/products/detail/ <%= producto.id %> ">
+                                                <img src="/img/products/<%= producto.image[0] %>" alt="">
+                                                <div class="datos">
+                                                    <div class="caja1">
+                                                        <h4>
+                                                            <%= producto.name %>
+                                                        </h4>
+                                                        <p>
+                                                            $ <%= toThousand(producto.price) %>
+                                                        </p>
+                                                    </div>
+                                                    <div class="caja2">
+                                                        <div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[0] %>>
+                                                            </div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[1] %>>
+                                                            </div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[2] %>>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart"><i class="far fa-heart"></i></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            </article>
+                                            <% }) %>
+                                    </section>
+                                </div>
+                                <div class="carousel-item">
+                                    <section class="articulos">
+                                        <% seleccionados2.forEach(producto=> { %>
+                                            <article class="<%= producto.clase %>">
+                                            <a class="a-art" href="/products/detail/ <%= producto.id %> ">
+                                                <img src="/img/products/<%= producto.image[0] %>" alt="">
+                                                <div class="datos">
+                                                    <div class="caja1">
+                                                        <h4>
+                                                            <%= producto.name %>
+                                                        </h4>
+                                                        <p>
+                                                            $ <%= toThousand(producto.price) %>
+                                                        </p>
+                                                    </div>
+                                                    <div class="caja2">
+                                                        <div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[0] %>>
+                                                            </div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[1] %>>
+                                                            </div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[2] %>>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart"><i class="far fa-heart"></i></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            </article>
+                                            <% }) %>
+                                    </section>
+                                </div>
+                                <div class="carousel-item">
+                                    <section class="articulos">
+                                        <% seleccionados3.forEach(producto=> { %>
+                                            <article class="<%= producto.clase %>">
+                                                <a class="a-art" href="/products/detail/ <%= producto.id %> ">
+                                                <img src="/img/products/<%= producto.image[0] %>" alt="">
+                                                <div class="datos">
+                                                    <div class="caja1">
+                                                        <h4>
+                                                            <%= producto.name %>
+                                                        </h4>
+                                                        <p>
+                                                            $ <%= toThousand(producto.price) %>
+                                                        </p>
+                                                    </div>
+                                                    <div class="caja2">
+                                                        <div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[0] %>>
+                                                            </div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[1] %>>
+                                                            </div>
+                                                            <div class="color-circle"
+                                                                style=<%='background-color:' +
+                                                                producto.colors[2] %>>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart"><i class="far fa-heart"></i></div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            </article>
+                                            <% }) %>
+                                    </section>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+
+                    <div>
+                        <div>
+                            <p>Productos destacados</p>
+                            <hr class="destacados">
+                        </div>
+                        
+                        <div class="glider-contain">
+                            <div class="glider">
+                              
+                                <% destacados.forEach(producto=> { %>
+                                    <article class="card p-3 mx-2">
+                                        <a class="a-art" href="/products/detail/ <%= producto.id %> ">
+                                        <img src="/img/products/<%= producto.image[0] %>" alt="">
+                                        <div class="datos">
+                                            <div class="caja1">
+                                                <h4>
+                                                    <%= producto.name %>
+                                                </h4>
+                                                <p>
+                                                    $ <%= toThousand(producto.price) %>
+                                                </p>
+                                            </div>
+                                            <div class="caja2">
+                                                <div>
+                                                    <div class="color-circle"
+                                                        style=<%='background-color:' +
+                                                        producto.colors[0] %>>
+                                                    </div>
+                                                    <div class="color-circle"
+                                                        style=<%='background-color:' +
+                                                        producto.colors[1] %>>
+                                                    </div>
+                                                    <div class="color-circle"
+                                                        style=<%='background-color:' +
+                                                        producto.colors[2] %>>
+                                                    </div>
+                                                </div>
+                                                <div class="heart"><i class="far fa-heart"></i></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </article>
+                                    <% }) %>
+                            
+                            </div>
+                            <button aria-label="Previous" class="glider-prev" style="left: -13px;top: 40%;">«</button>
+                            <button aria-label="Next" class="glider-next" style="right: -13px;top: 40%;">»</button>
+                            <div role="tablist" class="dots"></div>
+                          </div>
+                    </div>
+                    
+                </section>
+
+                </section>
+                <section class="ofertas">
+                    <div class="imagenes">
+                        <img src="/img/products/oferta1.jpg" alt="">
+                        <img src="/img/products/oferta4.jpg" alt="">
+                        <img src="/img/products/oferta3.jpg" alt="">
+                        <img src="/img/products/oferta2.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="tercero">
+            <section>
+                <img class="tienda1" src="/img/products/tienda.jpg" alt="tienda1">
+                <img class="tienda2" src="/img/products/tienda2.jpg" alt="tienda2">
+                <div class="tiendas">
+                    <div>
+                        <h3>nuestros locales</h3>
+                        <p>visitanos en nuestros locales con todos los <br> protocolos de seguridad necesarios
+                            para vos
+                        </p>
+                        <button type="button" class="btn btn-secondary btn-sm mx-auto">VER LOCALES</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="newsl">
+                        <div>
+                            <h3>newsletter</h3>
+                            <p>suscribite y enterate de las <br> novedades</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Ingresá tu email"
+                                    aria-label="Ingresá tu email" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="button-addon2">SUBSCRIBITE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <%- include('./partials/footer')  %> 
+
+    <%- include('./partials/scripts')  %> 
+    <script src="/javascripts/index.js"></script>
+</body>
+
+</html>

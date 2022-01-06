@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Esto es el Head-->
+    <%- include('./partials/head') %>
+<!--Esto es el Head-->
+<body class="register">
+<!--Esto es el header-->
+	<%-include('./partials/header')%>
+<!--Esto es el header-->
+        <main>
+            <div class="primero">
+                <section class="datos-personales">
+                    <h3>¡Completa tus datos!</h3>
+                    <p id="error-empty" class="feedback"></p>
+                    <form action="./register" method="POST" id="form-register">
+                        <section class="datos">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control <%= locals.errors && locals.errors.nombre ? 'is-invalid' : null %> " id="nombre" name="nombre" value= "<%= locals.old && locals.old.nombre ? old.nombre : null%>">
+                                <p class="text-danger" id="error-nombre">
+                                    <%= locals.errors && locals.errors.nombre ? errors.nombre.msg : null %>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="apellido">Apellido</label>
+                                <input type="text" class="form-control <%= locals.errors && locals.errors.apellido ? 'is-invalid' : null %> " id="apellido" name="apellido" value= "<%= locals.old && locals.old.apellido ? old.apellido : null%>">
+                                <p class="text-danger" id="error-apellido">
+                                    <%= locals.errors && locals.errors.apellido ? errors.apellido.msg : null %>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control <%= locals.errors && locals.errors.email ? 'is-invalid' : null %> " id="email" name="email">
+                                <p class="text-danger" id="error-email">
+                                    <%= locals.errors && locals.errors.email ? errors.email.msg : null %>
+                                </p>
+                            </div>
+                            <div>
+                                <label for="contraseña">Contraseña</label>
+                                <div class="contain">
+                                    <input type="password" class="passw form-control <%= locals.errors && locals.errors.password ? 'is-invalid' : null %> " id="contraseña" name="password">
+                                    <img onclick="passwordInput()" src="/img/Show.png" alt="" class="icon" id="eye">
+                                </div>
+                                <p class="text-danger" id="error-contraseña">
+                                    <%= locals.errors && locals.errors.password ? errors.password.msg : null %>
+                                </p>
+                            </div>
+                            <div class="birthday">
+                                <label for="birthday">Fecha de Nacimiento</label>
+                                <input type="date" class="form-date__input form-control <%= locals.errors && locals.errors.birthday ? 'is-invalid' : null %> " name="birthday" id="birthday">
+                                <p class="text-danger" id="error-birthday"></p>
+                            </div>
+
+                        </section>
+                        <div class="checkbox">
+                            <p>
+                                <input type="checkbox" name="newsletters">
+                                Quiero recibir Newsletter con noticias e información sobre los nuevos
+                                productos.
+                            </p>
+                        </div>
+                        <div class="checkbox">
+                            <p>
+                                <input type="checkbox" name="terminos" class="form-check-input <%= locals.errores && locals.errores.acepta ? 'is-invalid' : null %>" id="acepta">
+                                Acepto los <a href="">Términos y Condiciones</a> 
+                                <p class="text-danger" id="error-acepta">
+                                    <%= locals.errors && locals.errors.terminos ? errors.terminos.msg : null %>
+                                </p>
+                            </p>
+                        </div>
+                        <div class="boton-registro">
+                            <button type="submit" class="registrame">
+                                <a>registrarme</a>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <section class="ingresar">
+                <article class="iniciar-sesion">
+                    <p>¿Ya tenes cuenta?</p>
+                    <button type="button">
+                        <a href="./login">INICIAR SESION</a>
+                    </button>
+
+                </article>
+                <article class="ingresar__redes">
+                    <button type="button" class="ingresar__redes__button">
+                        <div class="ingresar__redes__icon">
+                        <i class="fab fa-facebook-square"></i> 
+                        </div>
+                        <p>Ingresar con Facebook</p>
+                    </button>
+                    
+                </article>
+                
+                <article class="ingresar__redes">
+                    <button type="button" class="ingresar__redes__button">
+                        <div class="ingresar__redes__icon">
+                            <i class="fab fa-google"></i> 
+                        </div>
+                        <p>Ingresar con Google</p></button>
+                </article>
+            </section>
+            <section class="info-importante">
+                <h4>INFORMACIÓN IMPORTANTE</h4>
+                <p>
+                    Por favor ingrese una dirección de mail válida y a la que usted tenga acceso. Esta dirección es
+                    fundamental para la comunicación pos-venta, envío de factura electrónica y coordinación de entrega de pedido.
+                </p>
+                <p>
+                    Ante cualquier duda o consulta comuníquese al <br> +54 (011) 5555-555 <br> de Lunes a Viernes de 08hs a 17hs.
+                </p>
+            </section>
+        </main>
+<!--Scripts & Footer-->
+        <%- include('./partials/scripts') %> 
+    <%- include('./partials/footer') %> 
+<!--Scripts & Footer-->
+        <script src="/javascripts/registerValidator.js"></script>
+        <script>
+    
+            function passwordInput(){
+                
+                var eye = document.getElementById('eye');
+                var input = document.getElementById('contraseña');
+    
+                if (input.type == "password") {
+                    input.type = "text"
+                    eye.style.opacity = 0.8;
+                }else{
+                    input.type = "password"
+                    eye.style.opacity = 0.2;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Domino's Head -->
+    <%-include('./partials/head')%> 
+    <body class="body_profileUser">
+        <!-- Domino's Header -->
+        <%-include('./partials/header')%>
+            <main>
+                <form action="/users/miperfil?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                    <div class="section_profileUser">
+                        <h2 class="greeting_profileUser">¡Hola <%=user.nombre%> <%= user.apellido %>!</h2>
+                        <section class="myinfo_profileUser">
+                            <section class="myinfo_profileUser_photo">
+                                <!-- Photo input -->
+                                <h2>Tu foto de perfil</h2>
+                                <div id="preview" class="updatePhoto">
+                                    <img src="/img/users/<%= user.avatar %>"  alt="foto-de-perfil" class="profilePicture_user">
+                                </div>
+                                <input type="file" name="fotoUsuario" accept="image/*" class="uploadPhoto" id="file">
+                            </section>
+                            
+                            <section class="myinfo_form_profileUser">
+                                <h3>Mis datos</h3>
+                                <!-- Nombre Input -->
+                                <label>Cambiar Nombre: </label>
+                                <input type="text" name="nombre" placeholder="<%= user.nombre %>" value="<%= locals.old && old.nombre ? old.nombre : user.nombre %>">
+                                <span class="small text-danger">
+                                    <%= locals.errors && locals.errors.nombre ? errors.nombre.msg : null %>
+                                </span>
+
+                                <!-- Apellido Input -->
+                                <label>Cambiar Apellido: </label>
+                                <input type="text" name="apellido" placeholder="<%= user.apellido %>" value="<%= locals.old && old.apellido ? old.apellido : user.apellido %>">
+                                <span class="small text-danger">
+                                    <%= locals.errors && locals.errors.apellido ? errors.apellido.msg : null %>
+                                </span>
+
+                                <!-- Contraseña Input -->
+                                <label>Cambiar Contraseña: </label>
+                                <input type="password" name="password" value = "<%= locals.old && old.password ? old.password : '' %>" placeholder="Contraseña Nueva">
+                                <span class="small text-danger">
+                                    <%= locals.errors && locals.errors.password ? errors.password.msg : null %>
+                                </span>
+
+                                <!-- Email Input -->
+                                <label>Cambiar Email: </label>
+                                <input type="email" name="email" value ="<%= locals.old && old.email ? old.email : user.email %>" placeholder="<%= user.email %>">
+                                <span class="small text-danger">
+                                    <%= locals.errors && locals.errors.email ? errors.email.msg : null %>
+                                </span>
+                                <button type="submit" class="btn btn-dark" onclick="modificarPerfil()">Guardar cambios</button>
+                            </section>
+                        </section>
+                    </div>
+                    
+                </form>
+            </main>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+            <script>
+                
+                function modificarPerfil(){
+                    event.preventDefault();
+                    var form = event.target.form;
+                    Swal.fire({
+                        title: '¿Modificar perfil?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'SI',
+                        cancelButtonText: 'NO',
+                        padding: '10px 15px 50px'
+                    }).then((result) => {
+                        if (result.isConfirmed){
+                            form.submit();
+                            Swal.fire(
+                            'Modificado!',
+                            '',
+                            'success',
+                            )
+                        }
+                    })
+                }
+            </script>
+        <!-- Go back to Home -->
+        
+        <!-- Domino's Footer-->
+        <%- include('./partials/footer')%>
+        <!-- Bootstrap Script -->
+        <%-include('./partials/scripts')%>  
+    </body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Esto es el Head-->
+    <%- include('./partials/head') %>
+    <title></title>
+<!--Esto es el Head-->
+
+<body class="general">
+
+    <!--Esto es el header-->
+        <%-include('./partials/header')%>
+    <!--Esto es el header-->
+
+    <!-- Sección 1 -->
+    <main class="detail-box">
+        <div class="view">
+            <aside class="view__multiple">
+              <% for( let i = 1; i < imagenes.length; i++ ) { %>
+                <img src="/img/products/<%=imagenes[i].nombre%>" alt="imagen-<%= i %>" class="view__multiple__img">
+              <% } %>
+            </aside>
+            <div class="view-1">
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                      <div class="carousel-item active">
+                        <img src="/img/products/<%=imagenes[0].nombre%>" class="d-block w-100">
+                      </div>
+                      <% for( let i = 1; i < imagenes.length; i++ ) { %>
+                        <div class="carousel-item view-1__otherview">
+                          <img src="/img/products/<%=imagenes[i].nombre%>" class="d-block w-100">
+                        </div>
+                      <% } %>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+
+        <!-- Sección 2 -->
+
+        <div class="margen">
+            <div class="aside-box">
+                <form action="" method="">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                          <li class="breadcrumb-item"><a href="/categories?filtro=<%=producto.idCategoria%>&genero=<%= producto.idGeneros %>"><%=producto.Categoria.nombre%></a></li>
+                          <li class="breadcrumb-item active" aria-current="page"><%= producto.nombre %> </li>
+                        </ol>
+                    </nav>
+                    <section>
+                        <div class="product__details">
+                            <p class="product_details__name"><%= producto.nombre %></p>
+                            <span class="product__details_money">$<%= producto.precio.toFixed(2) %></span>
+
+                        </div>
+                        <div class="cuotas__totaldiv">
+                            <div class="cuotas__minidiv">
+                                <i class="far fa-credit-card"></i>
+                                <span>12 cuotas sin interés de $<%= (producto.precio/12).toFixed(2) %></span> 
+                            </div>
+                            <% if (producto.descuento) { %>
+                              <div class="cuotas__minidiv">
+                                  <span><%= producto.descuento %>% de descuento pagando a convenir.</span> 
+                              </div>
+                              <span class="cuotas__span"><a href="">Ver más detalles</a></span>
+                            <% } %> 
+                        </div>
+                    </section>
+                    <section class="talle__div">
+
+                          <span class="talle__div__titular">Talles disponibles</span>
+                          <div class="talle__div__size">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                              <option selected>Ver talles...</option>
+                              <% for( let i = 0; i < producto.Talles.length; i++ ) { %>
+                                  <option value="1"><%= producto.Talles[i].talle %></option>
+                                  <% } %>
+                              </select>     
+                          </div>
+                        
+                        <article class="talle__div__cantidad-box">
+
+                          <% if (locals.userLogin) { %>
+                            <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-carrito" >
+                              <a href="#" onclick="agregarItem(event,'<%=producto.id%>')">Agregar al Carrito</a> -->
+                              <div class="d-flex flex-justify-content-around flex-wrap" style="width:100%;">           
+                                <a href="#" class="btn btn-dark" onclick="agregarItem(event,'<%=producto.id%>')">Agregar al carrito</a>
+                              </div>
+                          </button>
+                          <% } else {%>
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Agregar al carrito
+                            </button>
+                          <% } %>
+
+                        </article>
+                    </section>
+                    <div class="discount__box">
+                        <div class="discount__box__icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="discount__box__lema">
+                            <h3>DESCUENTO</h3>
+                            <p><b>10% OFF DE DESCUENTO</b> pagando en efectivo.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¡Debés iniciar sesión!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡No te quedés con las ganas <a href="/users/login"><b>Inicia Sesión</b></a> o <a href="/users/register"><b>Registrate</b></a> para poder comprar el producto que mas te guste!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="miCarrito">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tus productos guardados</h5>
+          </div>
+          <div class="modal-body" id="lista-carrito">
+            <div class="table-responsive">
+              <table class="table">
+                <thead id="cart-head">
+                  <tr>
+                    <th colspan="3">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">SubTotal</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    <span id="cart-empty" class="text-danger">El carrito no tiene productos agregados</span>
+                  </tbody>
+                  <tfoot id="cart-footer">
+                    <tr>
+                      <th colspan="4"  class="text-end" id="totaltitle">TOTAL:</th>
+                      <th >
+                        <h5 id="total"></h5>
+                      </th>
+                    </tr>
+                  </tfoot>
+                </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger" id="btn-delete-cart" onclick="empty()">Vaciar carrito</button>
+            <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+            <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy"> Finalizar compra</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+    <!-- Sección 3 -->
+
+        <div class="padding-box">
+            <!-- <form action="">
+                <div class="contenedor__filter">
+                    <p>XXX comentarios</p>
+                    <div class="contenedor__filter__div">
+                        <select name="" class="contenedor__filter__select">
+                            <option value="seleccion" hidden selected>Ordenar por...</option>
+                            <option value="popular">Más popular</option>
+                            <option value="recent">Más reciente</option>
+                            <option value="oldest">Más antiguo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="comment-box bottom">
+                    <div class="text-area-box">
+                        <div class="profile-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <textarea name="textareacomment" id="" class="comment-box__textarea"></textarea>
+                    </div>
+                    <div class="submit" rows="40" cols="50" placeholder="Comentá sobre este producto">
+                        <button> <input type="submit" hidden>¡Enviar!</button>
+                    </div>
+                </div>
+            </form> -->
+            <!-- <div class="h2-box">
+                <h2>Productos que te podrían interesar...</h2>
+            </div> -->
+            <!-- <div class="recommended">
+                <div class="recommended__1 card mb-3" style="max-width: 320px;">
+                    <div class="row g-0">
+                      <div class="col-sm-4">
+                        <img src="/img/products/<%= imagenes[0].nombre %>" class="img-fluid rounded-start" alt="recommended1" width="100%">
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= producto.nombre %></h5>
+                          <span><%= producto.precio %></span>
+                          <i class="far fa-heart"></i>
+                          <p class="card-text">¡Envío Gratis!</p>
+                          <p class="card-text"><small class="text-muted">Ult. vez agregado hace 2 meses</small></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!--Scripts & Footer-->
+        <%- include('./partials/scripts') %> 
+    <%- include('./partials/footer') %> 
+<!--Scripts & Footer-->
+</body>
+</html>

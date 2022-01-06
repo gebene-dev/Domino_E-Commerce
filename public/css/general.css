@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+a{
+    text-decoration: none;
+    color: #000; 
+}
+li{
+    list-style: none; 
+}
+
+:root{
+    --blanco:#F0F5F9;
+    --gris:#C9D6DF;
+    --gris-oscuro:#52616B;
+    --negro:#1E2022;
+}
+
+header a:hover, footer a:hover, .fa-heart:hover{
+    color: grey;
+}
+
+.fa-twitter-square:hover{ 
+    color: lightskyblue; 
+}
+
+.fa-facebook-square:hover{
+    color : #4c6cac;
+}
+
+.fa-instagram-square:hover{
+    color: violet
+}
+
+body{
+    background-color: #242424;
+}
+
+header, footer{
+    background-color: rgb(255, 255, 255);
+}

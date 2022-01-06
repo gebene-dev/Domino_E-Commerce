@@ -1,0 +1,389 @@
+<header>
+    <section class="header-sup">
+        <div class="logo">
+            <a href="/"><img src="/img/products/domino8.png" alt="Logo"></a>
+        </div>
+        <div class="buscador">
+            <form class="d-flex" action="/search" method="GET" id="form-search">
+                <input class="buscar" type="text" name="buscador" placeholder="¿Qué estás buscando?" id="input-search">
+                <button type="submit" onclick="event.preventDefault();document.getElementById('input-search').value && submit()"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <nav class="burger-buscar">
+            <ul class="nav1">
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bars"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="close">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        <a class="dropdown-item" href="#">HOMBRE</a>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="li-mobile">
+                                                <h4><a href="">Indumentaria</a></h4>
+                                                <hr class="dropdown-divider">
+                                                <ul>
+                                                    <li><a class="categorias" href="">Buzos</a></li>
+                                                    <li><a class="categorias" href="">Camperas</a></li>
+                                                    <li><a class="categorias" href="">Pantalones</a></li>
+                                                    <li><a class="categorias" href="">Remeras</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="li-mobile">
+                                                <h4><a href="">Calzado</a></h4>
+                                                <hr class="dropdown-divider">
+                                                <ul>
+                                                    <li><a class="categorias" href="">Zapatillas</a></li>
+                                                    <li><a class="categorias" href="">Borcegos</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="li-mobile">
+                                                <h4><a href="">Accesorios</a></h4>
+                                                <hr class="dropdown-divider">
+                                                <ul>
+                                                    <li><a class="categorias" href="">Bolsos</a></li>
+                                                    <li><a class="categorias" href="">gorras</a></li>
+                                                    <li><a class="categorias" href="">Mochilas</a></li>
+                                                    <li><a class="categorias" href="">Riñoneras</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        <a class="dropdown-item" href="#">MUJER</a>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="li-mobile">
+                                                <h4><a href="">Indumentaria</a></h4>
+                                                <hr class="dropdown-divider">
+                                                <ul>
+                                                    <li><a class="categorias" href="">Buzos</a></li>
+                                                    <li><a class="categorias" href="">Camperas</a></li>
+                                                    <li><a class="categorias" href="">Pantalones</a></li>
+                                                    <li><a class="categorias" href="">Remeras</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="li-mobile">
+                                                <h4><a href="">Calzado</a></h4>
+                                                <hr class="dropdown-divider">
+                                                <ul>
+                                                    <li><a class="categorias" href="">Zapatillas</a></li>
+                                                    <li><a class="categorias" href="">Borcegos</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="li-mobile">
+                                                <h4><a href="">Accesorios</a></h4>
+                                                <hr class="dropdown-divider">
+                                                <ul>
+                                                    <li><a class="categorias" href="">Bolsos</a></li>
+                                                    <li><a class="categorias" href="">gorras</a></li>
+                                                    <li><a class="categorias" href="">Mochilas</a></li>
+                                                    <li><a class="categorias" href="">Riñoneras</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        <a class="dropdown-item" href="#">SALE</a>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li><a class="dropdown-item" href="#">20% Off</a></li>
+                                            <li><a class="dropdown-item" href="#">40% Off</a></li>
+                                            <li><a class="dropdown-item" href="#">60% Off</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                        <li><a class="dropdown-item" href="#">Locales</a></li>
+                        <li><a class="dropdown-item" href="/vistas/cambios">Cambios</a></li>
+                        <li><a class="dropdown-item" href="/vistas/preguntas">Ayuda</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <% if (locals.userLogin) { %>
+                            <li><a class="dropdown-item" href="/users/miperfil">Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="/users/logout">Cerrar Sesión</a></li>
+                            <% } else { %>
+                                <li><a class="dropdown-item" href="/users/login">Inicia sesión</a></li>
+                                <li><a class="dropdown-item" href="/users/register">Registrate</a></li>
+                                <% } %>
+                    </ul>
+                </li>
+                <li><a href=""><i class="fas fa-search"></i></a></li>
+            </ul>
+        </nav>
+        <nav class="nav_profile">
+            <% if (locals.userLogin) { %>
+                <ul class="nav2">
+
+                    <li>
+                        <button type="button" class="nav-link btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge rounded-pill bg-warning" style:"font-size: 16px;"></span>
+                        </button>
+                    </li>
+
+                    <li class="nav-item dropdown locals_image locals">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img/users/<%= userLogin.avatar %>" alt="tufotodeperfil">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" style='border-right:1px solid gray;font-family: Roboto;font-weight: 600;font-size: 15pv;' href="/users/miperfil">Mi
+                                    Perfil</a></li>
+                            <li><a class="dropdown-item" style="font-family: Roboto;font-weight: 600;font-size: 15pv;" href="/users/logout">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <% } else { %>
+                    <ul class="nav2">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding: 20px;">
+                                <li><a class="dropdown-item" style='border-right:1px solid gray;font-family: Roboto;font-weight: 600;font-size: 15pv;'
+                                        href="/users/login">Iniciar sesión</a></li>
+                                <li><a class="dropdown-item" style="font-family: Roboto;font-weight: 600;font-size: 15pv;" href="/users/register">Registrate</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <% } %>
+        </nav>
+    </section>
+    <section>
+        <nav class="nav-principal">
+            <div class="nav-principal-div">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            HOMBRE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="categ">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><a class="dropdown-item"
+                                                    href="#">Indumentaria</a></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <form action="/categories" method="GET" name="filtro">
+                                                <ul>
+                                                    <li><a class="categorias" href="/categories?filtro=13&genero=1">Buzos</a></li>
+                                                    <li><a class="categorias" href="/categories?filtro=2&genero=1">Camperas</a></li>
+                                                    <li><a class="categorias" href="/categories?filtro=3&genero=1">Pantalones</a></li>
+                                                    <li><a class="categorias" href="/categories?filtro=1&genero=1">Remeras</a></li>
+                                                </ul>
+                                            </form>
+                                            
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </li>
+                            <li class="categ">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><a class="dropdown-item"
+                                                    href="#">Calzado</a></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <ul>
+                                                <li><a class="categorias" href="/categories?filtro=5&genero=1">Zapatillas</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=6&genero=1">Borcegos</a></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </li>
+                            <li class="categ">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><a class="dropdown-item"
+                                                    href="#">Accesorios</a></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <ul>
+                                                <li><a class="categorias" href="/categories?filtro=8&genero=3">Bolsos</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=7&genero=3">gorras</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=10&genero=3">Mochilas</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=9&genero=3">Riñoneras</a></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </li>
+                            <li><img class="envio-gratis" src="/img/products/envio-gratis.jpg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MUJER
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="categ">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><a class="dropdown-item"
+                                                    href="#">Indumentaria</a></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <ul>
+                                                <li><a class="categorias" href="/categories?filtro=13&genero=2">Buzos</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=2&genero=2">Camperas</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=3&genero=2">Pantalones</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=1&genero=2">Remeras</a></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </li>
+                            <li class="categ">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><a class="dropdown-item"
+                                                    href="#">Calzado</a></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <ul>
+                                                <li><a class="categorias" href="/categories?filtro=5&genero=2">Zapatillas</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=6&genero=2">Borcegos</a></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </li>
+                            <li class="categ">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><a class="dropdown-item"
+                                                    href="#">Accesorios</a></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <ul>
+                                                <li><a class="categorias" href="/categories?filtro=8&genero=3">Bolsos</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=7&genero=3">gorras</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=10&genero=3">Mochilas</a></li>
+                                                <li><a class="categorias" href="/categories?filtro=9&genero=3">Riñoneras</a></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </li>
+                            <li><img class="envio-gratis" src="/img/products/envio-gratis.jpg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SALE!
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" style='border-right:1px solid gray' href="/descuentos?descuento=20">20% Off</a></li>
+                            <li><a class="dropdown-item" style='border-right:1px solid gray' href="/descuentos?descuento=40">40% Off</a></li>
+                            <li><a class="dropdown-item" href="/descuentos?descuento=60">60% Off</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+                            Locales
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link dropdown-toggle" href="/vistas/cambios" id="navbarDropdown" role="button">
+                            Cambios
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/vistas/preguntas" id="navbarDropdown" role="button">
+                            Ayuda
+                        </a>
+                    </li>
+                    <% if (locals.userLogin && locals.userLogin.rol==='admin' ) { %>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Editar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" style='border-right:1px solid gray' href="/products">Todos
+                                        los productos</a></li>
+                                <li><a class="dropdown-item" href="/products/createProduct">Crear producto</a></li>
+                            </ul>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</header>
+
+<aside>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="miCarrito">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tus productos guardados</h5>
+          </div>
+          <div class="modal-body" id="lista-carrito">
+            <div class="table-responsive">
+              <table class="table">
+                <thead id="cart-head">
+                  <tr>
+                    <th colspan="3">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">SubTotal</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    <span id="cart-empty" class="text-danger">¿No sabés qué comprar? ¡Cientos de productos te esperan!</span>
+                  </tbody>
+                  <tfoot id="cart-footer">
+                    <tr>
+                      <th colspan="4"  class="text-end" id="totaltitle">TOTAL:</th>
+                      <th >
+                        <h5 id="total"></h5>
+                      </th>
+                    </tr>
+                  </tfoot>
+                </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger" id="btn-delete-cart" onclick="empty()">Vaciar carrito</button>
+            <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+            <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy">Finalizar compra</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>

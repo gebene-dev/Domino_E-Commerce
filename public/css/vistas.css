@@ -1,0 +1,99 @@
+.vistas main{
+    background-color:white;
+}
+
+.vistas h1 {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 0;
+}
+
+.vistas .component-container {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20px 10px 0px;
+    max-width: 800px;
+}
+
+.vistas .experience-component {
+    box-sizing: border-box;
+}
+
+.vistas .experience-component p {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #000;
+    line-height: 21px;
+    margin-bottom: 0;
+    padding: 0px 20px;
+}
+
+.vistas h2 {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #121212;
+}
+
+.vistas .component-containers h2{
+    margin-bottom: 0px;
+    padding: 20px 0px 0px 20px;
+}
+
+.accordion-button{
+    padding: 10px 10px 0px;
+    font-size: 14px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #f9fafb;
+    background-color: #484a4c;
+}
+
+@media (min-width: 768px){
+    .vistas h1 {
+        margin-left: 0px;
+        padding-left: 0px;
+        font-size: 30px;
+        font-weight: 500;
+        font-family: sans-serif;
+        color: #000;
+        margin-bottom: 0;
+    }
+
+    .vistas .component-container {
+        margin-top: 50px;
+        border-bottom: 1px solid #f2f2f2;
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .vistas .component-containers {
+        margin-top: 50px;
+        max-width: 800px;
+        margin: auto;
+        padding: 30px 30px 0px 30px;
+    }
+
+    .vistas h2 {
+        font-size: 20px;
+    }
+
+    .vistas .component-containers h2{
+        margin-bottom: 0px;
+    }
+
+    .vistas .experience-component p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .accordion-button{
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+    }
+}
