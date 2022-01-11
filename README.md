@@ -14,7 +14,7 @@ Te invitamos a que recorras nuestra página y que disfrutes de la gran variedad 
 
 Para hacer esta página utilizamos <strong>Node.Js</strong> del lado del servidor conectando directamente a la base de datos (<strong>MySQL</strong>) con el ORM <strong>Sequelize</strong> mediante el framework <strong>Express.Js</strong>. Hicimos uso de API's propias para poder comprobar la base de datos de los usuarios en la sección del registro y del login. Las vistas las hicimos con <strong>CSS</strong>, <strong>Bootstrap</strong> y <strong>Glider.js</strong>, en vez de utilizar HTML decidimos usar un template engine de Express llamado <strong>EJS</strong> para poder dinamizar nuestras vistas.
 
-La página se monta con el comando ##nodemon
+La página se monta con el comando <strong>nodemon</strong>
 
 # Referentes: 
 La página está basada en webs como: 
