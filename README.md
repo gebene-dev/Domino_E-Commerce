@@ -4,12 +4,17 @@ Somos una tienda online de ropa urbana y deportiva llamada **Domino**, destinada
 Contamos con marcas reconocidas, como también con ropa original con nuestro propio diseño. Entendemos los gustos de nuestros clientes, como las tendencias que acompañan a cada temporada, destacándonos por una amplia gama de colores, y cubriendo todos los talles, con precios accesibles.  
 Te invitamos a que recorras nuestra página y que disfrutes de la gran variedad de productos que tenemos para vos.
 
-
 # Integrantes (Encargados de hacer la página): 
 
 - Adriana Huide
 - Martin Alvarado
 - Brian Giménez
+- 
+# Tecnologías: 
+
+Para hacer esta página utilizamos ##Node.Js del lado del servidor conectando directamente a la base de datos (##MySql) con el ORM ##sequelize mediante el framework ##Express. Hicimos uso de API's propias para poder comprobar la base de datos de los usuarios en la sección del registro y del login. Las vistas las hicimos con ##CSS, ##Bootstrap y ##Glider.js, en vez de utilizar HTML decidimos usar un template engine de Express llamado ##EJS, para poder dinamizar nuestras vistas.
+
+La página se monta con el comando ##nodemon
 
 # Referentes: 
 La página está basada en webs como: 
